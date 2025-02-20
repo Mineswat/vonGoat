@@ -12,6 +12,8 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	
+	#this code will change the level to von
+	#should add a delay and fade]
 	get_tree().change_scene_to_file("res://level/vonland.tscn")
-	get_tree().quit()
+	
+	#get_tree().quit()

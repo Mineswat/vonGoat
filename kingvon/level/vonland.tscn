@@ -1,11 +1,50 @@
-[gd_scene load_steps=2 format=3 uid="uid://ekry1o842878"]
+[gd_scene load_steps=9 format=3 uid="uid://ekry1o842878"]
+
+[ext_resource type="ArrayMesh" uid="uid://cfb26e8on67w7" path="res://VonCROSS.obj" id="1_7p863"]
+[ext_resource type="PackedScene" uid="uid://c88le78f34lbu" path="res://characters/Von/KingVonHIM.tscn" id="2_rp0xg"]
+[ext_resource type="PackedScene" uid="uid://kvajt3va0rjd" path="res://characters/Von/Ch10_nonPBR.fbx" id="3_nxleq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ibjl8"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sky_energy_multiplier = 1.75
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_nb7dc"]
+sky_material = SubResource("ProceduralSkyMaterial_ibjl8")
+
+[sub_resource type="Environment" id="Environment_q3rer"]
+background_mode = 2
+sky = SubResource("Sky_nb7dc")
+tonemap_mode = 2
+ssao_enabled = true
+glow_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_biwfd"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yakxs"]
+albedo_color = Color(0.924839, 0.419712, 0, 1)
+
 [node name="Vonland" type="Node3D"]
+transform = Transform3D(7.39836, 0, 0, 0, 1, 0, 0, 0, 5.88078, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_q3rer")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.28, 0, 0, 0, 7.28, 0, 0, 0, 7.28, 0, 0, 0)
 mesh = SubResource("PlaneMesh_biwfd")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.740124, 0.67247, 0, -0.67247, 0.740124, 0.0935709, 2.62512, 2.48938)
+[node name="VonCross" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.135165, 0, 0, 0, 1, 0, 0, 0, 0.170045, 0.301536, 3.8147e-06, 0.163435)
+material_override = SubResource("StandardMaterial3D_yakxs")
+mesh = ExtResource("1_7p863")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.0966926, 0.0504805, 0.0948645, -0.189443, 0.96551, 0.17861, -0.0269083, -0.26474, 0.111079, 0, 3.88629, 1.85923)
+shadow_enabled = true
+
+[node name="KingVonHim" parent="." instance=ExtResource("2_rp0xg")]
+transform = Transform3D(0.135165, 0, 0, 0, 1, 0, 0, 0, 0.170045, -4.32847, 12.7547, -2.2125)
+
+[node name="Ch10_nonPBR" parent="." instance=ExtResource("3_nxleq")]
+transform = Transform3D(0.135165, 0, 0, 0, 1, 0, 0, 0, 0.170045, 0.0524245, 0, -1.02561)

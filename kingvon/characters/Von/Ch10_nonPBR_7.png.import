@@ -1,0 +1,37 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://p82exjxd3a56"
+path="res://.godot/imported/Ch10_nonPBR_7.png-a57934852a5b673e4f0e5bf47a6fa8c6.ctex"
+metadata={
+"vram_texture": false
+}
+generator_parameters={
+"md5": "fbcb539949b0c2c46b3b5aebebbbab8a"
+}
+
+[deps]
+
+source_file="res://characters/Von/Ch10_nonPBR_7.png"
+dest_files=["res://.godot/imported/Ch10_nonPBR_7.png-a57934852a5b673e4f0e5bf47a6fa8c6.ctex"]
+
+[params]
+
+compress/mode=3
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=5
+roughness/mode=1
+roughness/src_normal="res://characters/Von/Ch10_nonPBR_7.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=true
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=1024
+detect_3d/compress_to=0

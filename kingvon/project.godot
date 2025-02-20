@@ -13,12 +13,7 @@ config_version=5
 config/name="KingVon"
 run/main_scene="res://level/intro.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
-config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="KingVon"
-
-[rendering]
-
-renderer/rendering_method="mobile"
