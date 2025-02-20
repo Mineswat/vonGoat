@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://djelqxc7gg84x"]
+
+[ext_resource type="AudioStream" uid="uid://dswb66hshh0ap" path="res://audio/KingVonKING.mp3" id="1_8ayqy"]
+[ext_resource type="VideoStream" path="res://audio/von-1250.ogv" id="2_7knoh"]
+[ext_resource type="Texture2D" uid="uid://y7j72cwk72aq" path="res://level/kingvonPic.jpg" id="2_dueka"]
+[ext_resource type="Texture2D" uid="uid://c0j0fgsqk0rjk" path="res://audio/VonNBrojpg.jpg" id="4_cl2u7"]
+[ext_resource type="FontFile" uid="uid://uywlir1lqgxn" path="res://font/Detroit DEMO.ttf" id="5_7esk4"]
+[ext_resource type="Script" path="res://level/newScene.gd" id="6_1ar8o"]
+
+[sub_resource type="Theme" id="Theme_irovd"]
+
+[node name="Intro" type="Node2D"]
+
+[node name="KingVonKing" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(74, 562)
+stream = ExtResource("1_8ayqy")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1990.0
+offset_bottom = 1129.0
+scale = Vector2(0.58, 0.58)
+stream = ExtResource("2_7knoh")
+autoplay = true
+loop = true
+
+[node name="KingvonPic" type="Sprite2D" parent="."]
+position = Vector2(1011, 267)
+scale = Vector2(0.772, 0.666)
+texture = ExtResource("2_dueka")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="KingvonPic"]
+stream = ExtResource("1_8ayqy")
+volume_db = 4.542
+pitch_scale = 2.08
+autoplay = true
+
+[node name="VonNBrojpg" type="Sprite2D" parent="KingvonPic"]
+position = Vector2(-854.936, 388.889)
+scale = Vector2(0.69424, 0.449157)
+texture = ExtResource("4_cl2u7")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 299.0
+offset_right = 1069.0
+offset_bottom = 559.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_irovd")
+theme_override_fonts/font = ExtResource("5_7esk4")
+theme_override_font_sizes/font_size = 101
+text = "king von game"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 461.0
+offset_top = 64.0
+offset_right = 745.0
+offset_bottom = 250.0
+script = ExtResource("6_1ar8o")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

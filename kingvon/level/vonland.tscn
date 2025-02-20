@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ekry1o842878"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_biwfd"]
+
+[node name="Vonland" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_biwfd")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.740124, 0.67247, 0, -0.67247, 0.740124, 0.0935709, 2.62512, 2.48938)
