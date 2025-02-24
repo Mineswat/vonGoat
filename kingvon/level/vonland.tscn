@@ -44,7 +44,7 @@ transform = Transform3D(0.0966926, 0.0504805, 0.0948645, -0.189443, 0.96551, 0.1
 shadow_enabled = true
 
 [node name="KingVonHim" parent="." instance=ExtResource("2_rp0xg")]
-transform = Transform3D(0.135165, 0, 0, 0, 1, 0, 0, 0, 0.170045, -4.32847, 12.7547, -2.2125)
+transform = Transform3D(0.135165, 0, 0, 0, 1, 0, 0, 0, 0.170045, -4.32847, 0.00136483, -2.2125)
 
 [node name="Ch10_nonPBR" parent="." instance=ExtResource("3_nxleq")]
 transform = Transform3D(0.135165, 0, 0, 0, 1, 0, 0, 0, 0.170045, 0.0524245, 0, -1.02561)

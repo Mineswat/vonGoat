@@ -1,11 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://c88le78f34lbu"]
+[gd_scene load_steps=3 format=3 uid="uid://c88le78f34lbu"]
 
-[ext_resource type="ArrayMesh" uid="uid://bxg5x86bqev0q" path="res://characters/Von/SKM_KingVonDead.res" id="1_r4ao2"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g4we4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hp2lf"]
+radius = 0.2
 
 [node name="KingVonHim" type="Node3D"]
 
-[node name="SkmKingVonDead" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_r4ao2")
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 
-[node name="Camera3D" type="Camera3D" parent="SkmKingVonDead"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.74846e-07, 2.46276, -2)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = SubResource("CapsuleMesh_g4we4")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/MeshInstance3D"]
+shape = SubResource("CapsuleShape3D_hp2lf")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.480191, 0)
+current = true

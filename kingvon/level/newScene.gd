@@ -16,4 +16,5 @@ func _on_pressed() -> void:
 	#should add a delay and fade]
 	get_tree().change_scene_to_file("res://level/vonland.tscn")
 	
+	
 	#get_tree().quit()
