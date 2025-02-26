@@ -1,0 +1,11 @@
+[gd_resource type="PlaneMesh" load_steps=2 format=3 uid="uid://bktir6ayy6p8x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rdyml"]
+albedo_color = Color(0, 0.452202, 0.45342, 1)
+
+[resource]
+lightmap_size_hint = Vector2i(14, 14)
+material = SubResource("StandardMaterial3D_rdyml")
+flip_faces = true
+size = Vector2(2.5, 2.5)
+orientation = 0
